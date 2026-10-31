@@ -2,7 +2,7 @@
 
 ### Ask your documents. Inspect the evidence.
 
-An evidence-first document assistant with hybrid retrieval, page-level citations, an optional LLM evidence selector, and reproducible evaluations. Built by **Jaber Mobarak** as an AI engineering portfolio project.
+An evidence-first document assistant with hybrid retrieval, page-level citations, an optional LLM evidence selector, and reproducible evaluations. Built by **Jaber Mobarak** as an AI engineering project.
 
 ![EvidenceDesk interface](docs/screenshot.png)
 
