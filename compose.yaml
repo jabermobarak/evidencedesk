@@ -1,0 +1,13 @@
+services:
+  evidencedesk:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ED_DATABASE: /app/data/evidencedesk.sqlite3
+      ED_API_TOKEN: ${ED_API_TOKEN:-}
+    volumes:
+      - evidence-data:/app/data
+    restart: unless-stopped
+volumes:
+  evidence-data:

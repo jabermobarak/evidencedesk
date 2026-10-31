@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidencedesk"
+version = "0.1.0"
+description = "Evidence-first document QA with hybrid retrieval, verifiable citations, and reproducible evaluations"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Jaber Mobarak"}]
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pydantic>=2.9,<3",
+  "numpy>=1.26,<3", "scikit-learn>=1.5,<2", "httpx>=0.27,<1",
+  "pypdf>=5,<7", "python-multipart>=0.0.18,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "nbformat>=5.10,<6"]
+semantic = ["sentence-transformers>=3.3,<6"]
+
+[project.scripts]
+evidencedesk = "evidencedesk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+evidencedesk = ["static/*", "demo/*.json", "demo/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

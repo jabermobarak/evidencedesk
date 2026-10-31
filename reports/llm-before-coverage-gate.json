@@ -1,0 +1,52 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "torch": "2.15.0+cu132",
+  "device": "cpu",
+  "scope": "Two-question smoke test, not a benchmark",
+  "results": [
+    {
+      "question": "What is the meal reimbursement limit?",
+      "request_id": "4ec216b794d74a6086a596fefb6873a8",
+      "status": "answered",
+      "answer": "The meal reimbursement limit is 2500 RUB per person per day. [1]",
+      "citations": [
+        {
+          "chunk_id": "8b72efe0f99ad64425f6:p1:c0",
+          "document_id": "8b72efe0f99ad64425f6",
+          "title": "expense-policy.md",
+          "page": 1,
+          "quote": "The meal reimbursement limit is 2500 RUB per person per day.",
+          "score": 0.032787
+        }
+      ],
+      "retrieval_backend": "bm25+tfidf",
+      "generation_backend": "llm-verified-quotes",
+      "latency_ms": 7733.47,
+      "warnings": [
+        "Some retrieved passages were excluded by relevance or instruction checks."
+      ]
+    },
+    {
+      "question": "What is the penalty for late expense claims?",
+      "request_id": "bbebc6f1d35c45019efcfbd4ece41cda",
+      "status": "answered",
+      "answer": "The finance team processes approved expense claims within 10 business days. [1]",
+      "citations": [
+        {
+          "chunk_id": "8b72efe0f99ad64425f6:p1:c0",
+          "document_id": "8b72efe0f99ad64425f6",
+          "title": "expense-policy.md",
+          "page": 1,
+          "quote": "The finance team processes approved expense claims within 10 business days.",
+          "score": 0.032787
+        }
+      ],
+      "retrieval_backend": "bm25+tfidf",
+      "generation_backend": "llm-verified-quotes",
+      "latency_ms": 8071.58,
+      "warnings": [
+        "Some retrieved passages were excluded by relevance or instruction checks."
+      ]
+    }
+  ]
+}

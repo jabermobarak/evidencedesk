@@ -1,0 +1,44 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "torch": "2.15.0+cu132",
+  "device": "cpu",
+  "scope": "Two-question smoke test, not a benchmark",
+  "results": [
+    {
+      "question": "What is the meal reimbursement limit?",
+      "request_id": "3f678800d8094362921cda2e443f6d40",
+      "status": "answered",
+      "answer": "The meal reimbursement limit is 2500 RUB per person per day. [1]",
+      "citations": [
+        {
+          "chunk_id": "8b72efe0f99ad64425f6:p1:c0",
+          "document_id": "8b72efe0f99ad64425f6",
+          "title": "expense-policy.md",
+          "page": 1,
+          "quote": "The meal reimbursement limit is 2500 RUB per person per day.",
+          "score": 0.032787
+        }
+      ],
+      "retrieval_backend": "bm25+tfidf",
+      "generation_backend": "llm-verified-quotes",
+      "latency_ms": 8214.83,
+      "warnings": [
+        "Some retrieved passages were excluded by relevance or instruction checks."
+      ]
+    },
+    {
+      "question": "What is the penalty for late expense claims?",
+      "request_id": "4539b853b5be4e0ab25c9c07c60ef0b4",
+      "status": "abstained",
+      "answer": "I could not find sufficient evidence in the indexed documents.",
+      "citations": [],
+      "retrieval_backend": "bm25+tfidf",
+      "generation_backend": "extractive",
+      "latency_ms": 1.61,
+      "warnings": [
+        "Some retrieved passages were excluded by relevance or instruction checks.",
+        "No candidate sentence passed the conservative question-token coverage gate."
+      ]
+    }
+  ]
+}

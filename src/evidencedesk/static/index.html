@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>EvidenceDesk — Answers with receipts</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/"><span class="logo">e.</span> EvidenceDesk</a>
+  <div class="workspace"><span class="dot"></span> LOCAL WORKSPACE <span class="version">v0.1</span></div>
+  <div class="section-label">YOUR KNOWLEDGE BASE <span id="doc-count">0</span></div>
+  <label class="upload" for="upload"><span class="upload-icon">↑</span><strong>Add a document</strong><small>PDF, Markdown or TXT · up to 2 MB</small></label>
+  <input type="file" id="upload" accept=".pdf,.md,.txt" hidden>
+  <div id="documents" class="documents"><p class="muted">Your documents will appear here.</p></div>
+  <button id="load-demo" class="secondary full">Load sample workspace</button>
+  <div class="sidebar-bottom"><label for="token">Workspace token <span>(if enabled)</span></label><input id="token" type="password" autocomplete="off" placeholder="Bearer token"><p>Documents stay on this server. An optional remote model receives retrieved excerpts.</p><a href="/docs" target="_blank" rel="noreferrer">Explore the API ↗</a></div>
+</aside>
+<main>
+  <header><div><span class="breadcrumb">WORKSPACE</span><span class="slash">/</span><span>Document intelligence</span></div><span class="online"><span class="dot"></span> <span id="connection">Connecting</span></span></header>
+  <section class="intro"><div class="eyebrow">FIND THE ANSWER. SEE THE EVIDENCE.</div><h1>Your documents,<br>with answers attached.</h1><p>Ask a question across your knowledge base. Every answer comes with the exact passages behind it.</p></section>
+  <section class="ask-card">
+    <form id="ask-form"><label for="question">What would you like to know?</label><textarea id="question" rows="3" maxlength="1500" placeholder="e.g. How quickly must a critical incident be acknowledged?" required minlength="3"></textarea><div class="composer-bottom"><div class="options"><select id="mode" aria-label="Retrieval method"><option value="hybrid">Hybrid search</option><option value="bm25">BM25 only</option><option value="vector">Vector only</option></select><label class="toggle"><input id="use-llm" type="checkbox"> LLM evidence selection</label></div><button type="submit" id="ask">Find evidence <span>↗</span></button></div></form>
+  </section>
+  <div class="suggestions"><span>TRY ASKING</span><button data-question="How quickly must a critical incident be acknowledged?">Critical incident response</button><button data-question="How many days of annual leave do employees receive?">Annual leave policy</button><button data-question="What is the office Wi-Fi password?">An unsupported question</button></div>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <section id="result" hidden><div class="result-heading"><h2>What the documents say</h2><span id="status" class="badge"></span></div><p id="answer" class="answer"></p><div class="evidence-heading"><h3>Source evidence</h3><span id="citation-count"></span></div><div id="citations"></div><div id="trace" class="trace"></div><ul id="warnings" class="warnings"></ul></section>
+  <section id="empty" class="empty"><div class="empty-mark">“</div><h2>Evidence comes first.</h2><p>Add your documents or load the sample workspace to get started.<br>If the evidence is missing, EvidenceDesk will say so.</p><div class="principles"><span>01 &nbsp; Retrieve</span><span>02 &nbsp; Check</span><span>03 &nbsp; Cite</span></div></section>
+  <footer><span>Built by Jaber Mobarak</span><span id="backend">Offline retrieval demo · no API key required</span></footer>
+</main>
+</body></html>

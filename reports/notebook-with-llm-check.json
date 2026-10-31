@@ -1,0 +1,61 @@
+{
+  "execution": "Exact code-cell replay in a fresh local directory, not a hosted Colab session",
+  "use_semantic": true,
+  "use_local_llm": true,
+  "cells": [
+    {
+      "cell_index": 1,
+      "title": "#@title 1. Choose the demo mode",
+      "seconds": 0.0,
+      "status": "passed"
+    },
+    {
+      "cell_index": 3,
+      "title": "#@title 2. Extract and install (embedded source)",
+      "seconds": 1.97,
+      "status": "passed"
+    },
+    {
+      "cell_index": 4,
+      "title": "#@title 3. Verify the software",
+      "seconds": 2.39,
+      "status": "passed"
+    },
+    {
+      "cell_index": 6,
+      "title": "#@title 4. Build the index and ask questions",
+      "seconds": 10.71,
+      "status": "passed"
+    },
+    {
+      "cell_index": 7,
+      "title": "#@title 5. Reproduce the benchmark and its failure cases",
+      "seconds": 3.07,
+      "status": "passed"
+    },
+    {
+      "cell_index": 9,
+      "title": "#@title 6. Start Qwen when enabled",
+      "seconds": 22.15,
+      "status": "passed"
+    },
+    {
+      "cell_index": 11,
+      "title": "#@title 7. Launch the web application",
+      "seconds": 1.55,
+      "status": "passed"
+    },
+    {
+      "cell_index": 13,
+      "title": "#@title 8. Package source and measured reports",
+      "seconds": 0.03,
+      "status": "passed"
+    },
+    {
+      "cell_index": 14,
+      "title": "#@title 9. Stop servers when finished",
+      "seconds": 0.0,
+      "status": "passed"
+    }
+  ]
+}

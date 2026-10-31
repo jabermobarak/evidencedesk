@@ -1,0 +1,7 @@
+# Optional model versions used during the live CPU checks.
+# torch uses the PyPI version; GPU wheel selection depends on platform.
+sentence-transformers==5.7.0
+transformers==5.22.1
+torch==2.15.0
+huggingface-hub==2.4.0
+safetensors==0.8.0
